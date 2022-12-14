@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_14_145751) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_14_152806) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_145751) do
     t.bigint "user_id", null: false
     t.integer "user_2"
     t.boolean "likes"
+    t.boolean "likes2"
     t.index ["user_id"], name: "index_decisions_on_user_id"
   end
 
