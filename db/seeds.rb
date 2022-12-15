@@ -25,7 +25,7 @@ user2 = User.create!(
   age: 1000,
   bio: "Love hooking up"
 )
-user2 = User.create!(
+user3 = User.create!(
   email: "ghostface@halloween.com",
   password: "xxxxxx",
   username: "Ghostface",
@@ -33,4 +33,34 @@ user2 = User.create!(
   location: "Callcenter",
   age: 35,
   bio: "Hide and seed specialist"
+)
+
+user4 = User.create!(
+  email: "demo@halloween.com",
+  password: "xxxxxx",
+  username: "Demogorgan",
+  occupation: "Monster",
+  location: "Upside Down",
+  age: 100,
+  bio: "create portals and shit"
+)
+
+user5 = User.create!(
+  email: "freddie@halloween.com",
+  password: "xxxxxx",
+  username: "Freddie",
+  occupation: "Sandman",
+  location: "Your dreams",
+  age: 55,
+  bio: "1,2, freddie comes for you"
+)
+
+user6 = User.create!(
+  email: "jason@halloween.com",
+  password: "xxxxxx",
+  username: "Jason Vorhees",
+  occupation: "Camper",
+  location: "Camp Crystal Lake",
+  age: 45,
+  bio: "drowned and came back to life"
 )
