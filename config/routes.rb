@@ -7,3 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get :matchmaker, to: "pages#matchmaker"
 end
+
+# post :favorites, to: "favorites#create_favorite"
