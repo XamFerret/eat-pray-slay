@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get :matchmaker, to: "pages#matchmaker"
   resources :users, only: %i[show]
   post :swipe_right, to: "decisions#swipe_right"
-
+  post :swipe_left, to: "decisions#swipe_left"
   get :matches, to: "pages#matches"
 
 end

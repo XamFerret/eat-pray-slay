@@ -9,8 +9,7 @@
 <li>Age: <%= @user.age %></li>
 </ul>
 
-<button>LEFT</button>
-<button>RIGHT</button>
 
+<%= link_to "Left", swipe_left_path(user: @user.id), data: {turbo_method: :post} %>
 
 <%= link_to "Right", swipe_right_path(user: @user.id), data: {turbo_method: :post} %>

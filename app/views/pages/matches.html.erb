@@ -1,1 +1,17 @@
-<% @decisions.all %>
+
+<h2>You have matched with:</h2>
+
+<% @matches.each do |match| %>
+  <% user2 = User.where(id: match.user_2).first %>
+  <% if match.user_id == current_user.id %>
+    <p><%= user2.username%> (<%=user2.age%>)</p>
+    <p><%= user2.occupation %></p>
+    <p><%= user2.location %></p>
+    <p><%= user2.bio %></p>
+  <% else %>
+    <p><%= match.user.username %>(<%=match.user.age%>)</p>
+    <p><%= match.user.occupation %></p>
+    <p><%= match.user.location %></p>
+    <p><%= match.user.bio %></p>
+  <% end %>
+<% end %>

@@ -3,16 +3,12 @@ class PagesController < ApplicationController
 
   def home
     @users = User.excluding(current_user)
-  end
-
-  def matchmaker
-    @users = User.excluding(current_user)
+    @decisions = Decision.where(user_id: current_user)
   end
 
   def matches
     @decisions = Decision.where("user_id = ? or user_2 = ?", "#{current_user.id}", "#{current_user.id}")
-    raise
-    @matches = Match.where
+    @matches = @decisions.where("likes = ? and likes2 = ?", "true", "true")
   end
 
 end
