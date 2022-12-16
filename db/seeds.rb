@@ -1,14 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
-
-user1 = User.create!(
-  email: "michael@halloween.com",
+User.create!(
+  email: "michael@match.com",
   password: "xxxxxx",
   username: "michael",
   occupation: "stalker",
@@ -16,17 +7,19 @@ user1 = User.create!(
   age: 49,
   bio: "Wore mask before covid"
 )
-user2 = User.create!(
-  email: "hellpriest@halloween.com",
+
+User.create!(
+  email: "pinhead@match.com",
   password: "xxxxxx",
-  username: "Hellpreiest",
+  username: "Pinhead",
   occupation: "SM Artist",
   location: "Hell",
   age: 1000,
   bio: "Love hooking up"
 )
-user3 = User.create!(
-  email: "ghostface@halloween.com",
+
+User.create!(
+  email: "ghostface@match.com",
   password: "xxxxxx",
   username: "Ghostface",
   occupation: "Phone operator",
@@ -35,8 +28,8 @@ user3 = User.create!(
   bio: "Hide and seed specialist"
 )
 
-user4 = User.create!(
-  email: "demo@halloween.com",
+User.create!(
+  email: "demo@match.com",
   password: "xxxxxx",
   username: "Demogorgan",
   occupation: "Monster",
@@ -45,8 +38,8 @@ user4 = User.create!(
   bio: "create portals and shit"
 )
 
-user5 = User.create!(
-  email: "freddie@halloween.com",
+User.create!(
+  email: "freddie@match.com",
   password: "xxxxxx",
   username: "Freddie",
   occupation: "Sandman",
@@ -55,12 +48,72 @@ user5 = User.create!(
   bio: "1,2, freddie comes for you"
 )
 
-user6 = User.create!(
-  email: "jason@halloween.com",
+User.create!(
+  email: "jason@match.com",
   password: "xxxxxx",
   username: "Jason Vorhees",
   occupation: "Camper",
   location: "Camp Crystal Lake",
   age: 45,
   bio: "drowned and came back to life"
+)
+
+User.create!(
+  email: "jason@match.com",
+  password: "xxxxxx",
+  username: "Jason Vorhees",
+  occupation: "Camper",
+  location: "Camp Crystal Lake",
+  age: 45,
+  bio: "drowned and came back to life"
+)
+
+User.create!(
+  email: "pennywise@match.com",
+  password: "xxxxxx",
+  username: "Pennywise",
+  occupation: "Clown",
+  location: "Derry",
+  age: 10000,
+  bio: "clown around with me"
+)
+
+User.create!(
+  email: "pennywise@match.com",
+  password: "xxxxxx",
+  username: "Pennywise",
+  occupation: "Clown",
+  location: "Derry",
+  age: 10000,
+  bio: "clown around with me"
+)
+
+User.create!(
+  email: "jigsaw@match.com",
+  password: "xxxxxx",
+  username: "Jigsaw",
+  occupation: "Life Coach",
+  location: "New Jersey",
+  age: 52,
+  bio: "enroll in my course on how to appreciate life"
+)
+
+User.create!(
+  email: "chucky@match.com",
+  password: "xxxxxx",
+  username: "Chucky",
+  occupation: "Good Guy",
+  location: "Toybox",
+  age: 58,
+  bio: "Do you wanna be my friend?"
+)
+
+User.create!(
+  email: "leatherface@match.com",
+  password: "xxxxxx",
+  username: "Leatherface",
+  occupation: "butcher",
+  location: "Texas",
+  age: 26,
+  bio: "Blervbjheibvr  ovrioweqnäöweo"
 )
