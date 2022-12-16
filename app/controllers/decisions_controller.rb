@@ -10,7 +10,6 @@ class DecisionsController < ApplicationController
     @decision.user_2 = params[:user]
     @decision.likes = true
     @decision.save!
-    raise
   end
 
   def swipe_right
@@ -30,7 +29,7 @@ class DecisionsController < ApplicationController
   end
 
   def update_right
-    @decision = Decision.where(["user_id = ? and user_2 = ?", "#{params[:user]}", "#{current_user}"])
+    @decision = Decision.where(["user_id = ? and user_2 = ?", "#{params[:user]}", "#{current_user.id}"]).first
     @decision.likes2 = true
     if @decision.likes == true && @decision.likes2 == true
       create_match
@@ -59,8 +58,7 @@ class DecisionsController < ApplicationController
   private
 
   def decision_check?
-    @decision = Decision.where(["user_id = ? and user_2 = ?", "#{params[:user]}", "#{current_user.id}"])
+    @decision = Decision.where(["user_id = ? and user_2 = ?", "#{params[:user]}", "#{current_user.id}"]).first
     @decision.present?
   end
-
 end

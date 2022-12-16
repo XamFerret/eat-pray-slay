@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :users, only: %i[show]
   post :swipe_right, to: "decisions#swipe_right"
 
+  get :matches, to: "pages#matches"
+
 end
 
 # post :favorites, to: "favorites#create_favorite"
