@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
+
   def home
+    @users = User.excluding(current_user)
   end
 
   def matchmaker
@@ -8,3 +10,8 @@ class PagesController < ApplicationController
   end
 
 end
+
+# => users = User.where.not(id: current_user.id)
+# @decision = Decision.where(["user_id = ? and user_2 = ?", "#{params[:user]}", "#{current_user}"])
+
+# @users = User.where.not()

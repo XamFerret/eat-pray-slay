@@ -1,6 +1,14 @@
 <h1>HI GUUUUUUURL</h1>
 
+<% shown_user = @users.sample %>
 
-<% @users.each do |user| %>
-<%= user.username %>
-<% end %>
+<ul>
+<h2><li><%= shown_user.username %></li></h2>
+<li>Occcupation: <%=shown_user.occupation %></li>
+<li>Location: </li><%= shown_user.location %>
+<li><%= shown_user.bio %></li>
+<li>Age: <%= shown_user.age %></li>
+</ul>
+
+<button>LEFT</button>
+<button>RIGHT</button>
