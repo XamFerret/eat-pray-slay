@@ -59,26 +59,6 @@ User.create!(
 )
 
 User.create!(
-  email: "jason@match.com",
-  password: "xxxxxx",
-  username: "Jason Vorhees",
-  occupation: "Camper",
-  location: "Camp Crystal Lake",
-  age: 45,
-  bio: "drowned and came back to life"
-)
-
-User.create!(
-  email: "pennywise@match.com",
-  password: "xxxxxx",
-  username: "Pennywise",
-  occupation: "Clown",
-  location: "Derry",
-  age: 10000,
-  bio: "clown around with me"
-)
-
-User.create!(
   email: "pennywise@match.com",
   password: "xxxxxx",
   username: "Pennywise",

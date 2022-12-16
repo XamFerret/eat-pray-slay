@@ -4,6 +4,22 @@ class DecisionsController < ApplicationController
     @decision = Decision.new
   end
 
+  def refresh_users
+    @decisions = Decision.where(user_id: current_user)
+    user_2 = []
+    @user_decision = []
+    if @decisions.empty?
+      all_users = User.excluding(current_user)
+      @user_decision = all_users.sample
+    else
+      @decisions.each do |decision|
+      user_2 << decision.user_2
+      all_users = User.where.not(id: user_2).and(User.where.not(id: current_user.id))
+      @user_decision = all_users.sample
+      end
+    end
+  end
+
   def swipe_right
     if decision_check?
       update_right
@@ -18,6 +34,9 @@ class DecisionsController < ApplicationController
     @decision.user_2 = params[:user]
     @decision.likes = true
     @decision.save!
+    refresh_users
+    redirect_to user_path(@user_decision)
+
   end
 
   def update_right
