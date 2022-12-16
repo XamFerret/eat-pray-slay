@@ -2,11 +2,15 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <% user_2 = [] %>
-<% user_match = [] %>
-<% @decisions.each do |decision| %>
-  <% user_2 << decision.user_2 %>
-  <% all_users = User.where.not(id: user_2).and(User.where.not(id: current_user.id)) %>
-  <% user_match = all_users.sample%>
+<% @user_decision = [] %>
+<% if @decisions.empty? %>
+  <% all_users = User.excluding(current_user) %>
+  <% @user_decision = all_users.sample %>
+<% else %>
+  <% @decisions.each do |decision| %>
+    <% user_2 << decision.user_2 %>
+    <% all_users = User.where.not(id: user_2).and(User.where.not(id: current_user.id)) %>
+    <% @user_decision = all_users.sample%>
+  <% end %>
 <% end %>
-<%= link_to "Matchmaker", user_path(user_match) %>
-
+<%= link_to "Matchmaker", user_path(@user_decision) %>
