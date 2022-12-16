@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get :matchmaker, to: "pages#matchmaker"
-  resources :users
+  resources :users, only: %i[show]
   post :swipe_right, to: "decisions#swipe_right"
 
 end

@@ -40,7 +40,7 @@ class DecisionsController < ApplicationController
   def create_left
     @decision = Decision.new
     @decision.user = current_user
-    @decision.user2 = User.find(params[:user])
+    @decision.user2 = params[:user]
     @decision.likes = false
     @decision.save!
   end
